@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bedarfsanalyse von Georalis Consulting — Finden Sie heraus, welches Beratungsmodell zu Ihrer Situation passt.">
+  <meta property="og:title" content="Bedarfsanalyse — Georalis Consulting GmbH">
+  <title>Bedarfsanalyse — Georalis Consulting GmbH</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional styles specific to this page */
+    .analyse-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .step-form-group {
+      margin-bottom: 28px;
+    }
+    .step-form-group > .form-label {
+      margin-bottom: 16px;
+    }
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: clamp(60px, 10vw, 120px) 0;
+    }
+    .success-message h2 {
+      font-family: var(--serif);
+      font-size: var(--h2-size);
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .success-message p {
+      color: var(--secondary);
+      font-size: var(--sm-size);
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Hauptnavigation">
+  <a href="index.html" class="nav-logo">Georalis</a>
+  <ul class="nav-links" role="list">
+    <li><a href="fokus.html" class="nav-link">Fokus</a></li>
+    <li><a href="service.html" class="nav-link">Service</a></li>
+    <li><a href="profil.html" class="nav-link">Profil</a></li>
+    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    <li><a href="bedarfsanalyse.html" class="nav-cta">Bedarfsanalyse</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" role="dialog" aria-modal="true">
+  <a href="fokus.html" class="nav-link">Fokus</a>
+  <a href="service.html" class="nav-link">Service</a>
+  <a href="profil.html" class="nav-link">Profil</a>
+  <a href="kontakt.html" class="nav-link">Kontakt</a>
+  <a href="bedarfsanalyse.html" class="btn btn-outline">Bedarfsanalyse</a>
+</div>
+
+<main>
+
+  <header class="page-header reveal">
+    <span class="label">Bedarfsanalyse</span>
+    <h1>Was braucht Ihr Unternehmen wirklich?</h1>
+    <p>Drei Schritte, um das passende Beratungsmodell zu finden. Dauert ca. 3 Minuten.</p>
+  </header>
+
+  <section class="section">
+    <div class="analyse-wrap">
+
+      <!-- Progress Bar -->
+      <div class="steps-progress" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" aria-label="Schritt 1 von 3">
+        <div class="step-dot-node active"></div>
+        <div class="step-bar active" style="position:relative">
+          <span class="step-label">Unternehmen</span>
+        </div>
+        <div class="step-dot-node"></div>
+        <div class="step-bar" style="position:relative">
+          <span class="step-label">Anliegen</span>
+        </div>
+        <div class="step-dot-node"></div>
+        <div class="step-bar" style="position:relative">
+          <span class="step-label">Kontakt</span>
+        </div>
+        <div class="step-dot-node"></div>
+      </div>
+
+      <form id="analyse-form" novalidate>
+
+        <!-- Step 1 -->
+        <div class="step-form active" id="step-1" aria-label="Schritt 1: Über Ihr Unternehmen">
+          <h2 class="step-title">Über Ihr Unternehmen</h2>
+          <span class="step-subtitle">Helfen Sie uns, Ihre Situation besser zu verstehen.</span>
+
+          <div class="step-form-group">
+            <span class="form-label" id="size-label">Unternehmensgröße <span aria-label="Pflichtfeld">*</span></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="size-label">
+              <label class="option-label">
+                <input type="radio" name="size" value="micro" required>
+                <span>Weniger als 10 Mitarbeitende</span>
+              </label>
+              <label class="option-label">
+                <input type="radio" name="size" value="small">
+                <span>10 – 50 Mitarbeitende</span>
+              </label>
+              <label class="option-label">
+                <input type="radio" name="size" value="medium">
+                <span>50 – 250 Mitarbeitende</span>
+              </label>
+              <label class="option-label">
+                <input type="radio" name="size" value="large">
+                <span>250+ Mitarbeitende</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="step-form-group">
+            <label class="form-label" for="industry">Branche <span aria-label="Pflichtfeld">*</span></label>
+            <select class="form-select" id="industry" name="industry" required>
+              <option value="" disabled selected>Bitte wählen …</option>
+              <option value="manufacturing">Produktion &amp; Industrie</option>
+              <option value="trade">Handel &amp; E-Commerce</option>
+              <option value="logistics">Logistik &amp; Transport</option>
+              <option value="finance">Finanzdienstleistungen</option>
+              <option value="healthcare">Gesundheit &amp; Pharma</option>
+              <option value="tech">Technologie &amp; Software</option>
+              <option value="consulting">Beratung &amp; Professional Services</option>
+              <option value="public">Öffentlicher Sektor &amp; Verwaltung</option>
+              <option value="nonprofit">Non-Profit &amp; NGO</option>
+              <option value="other">Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="step-form-group">
+            <label class="form-label" for="role">Ihre Rolle im Unternehmen</label>
+            <input class="form-input" type="text" id="role" name="role" placeholder="z.B. Geschäftsführerin, Head of Operations …" autocomplete="organization-title">
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-primary" data-next="1">Weiter →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-form" id="step-2" aria-label="Schritt 2: Ihr aktuelles Anliegen">
+          <h2 class="step-title">Ihr aktuelles Anliegen</h2>
+          <span class="step-subtitle">Was bewegt Sie gerade? (Mehrfachauswahl möglich)</span>
+
+          <div class="step-form-group">
+            <span class="form-label" id="focus-label">Welche Bereiche betrifft es?</span>
+            <div class="checkbox-group" role="group" aria-labelledby="focus-label">
+              <label class="option-label">
+                <input type="checkbox" name="focus" value="prozesse">
+                <span>Prozesse &amp; Systeme — wir müssen effizienter werden</span>
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="focus" value="supplychain">
+                <span>Supply Chain &amp; Zoll — globale Handelsprozesse bereiten Probleme</span>
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="focus" value="fuehrung">
+                <span>Organisation &amp; Führung — Strukturen und Teams entwickeln</span>
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="focus" value="stabilitaet">
+                <span>Stabilität &amp; Wirkung — Governance, Non-Profit, Public Sector</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="step-form-group">
+            <label class="form-label" for="challenge">Was ist aktuell Ihre größte Herausforderung? <span aria-label="Pflichtfeld">*</span></label>
+            <textarea class="form-textarea" id="challenge" name="challenge" placeholder="Beschreiben Sie frei, was Sie aktuell beschäftigt. Je konkreter, desto besser." rows="5" required></textarea>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-outline" data-prev="0">← Zurück</button>
+            <button type="button" class="btn btn-primary" data-next="2">Weiter →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-form" id="step-3" aria-label="Schritt 3: Kontaktdaten">
+          <h2 class="step-title">Ihre Kontaktdaten</h2>
+          <span class="step-subtitle">Damit wir uns bei Ihnen melden können.</span>
+
+          <div class="step-form-group">
+            <label class="form-label" for="ba-name">Name <span aria-label="Pflichtfeld">*</span></label>
+            <input class="form-input" type="text" id="ba-name" name="name" placeholder="Ihr vollständiger Name" required autocomplete="name">
+          </div>
+
+          <div class="step-form-group">
+            <label class="form-label" for="ba-email">E-Mail <span aria-label="Pflichtfeld">*</span></label>
+            <input class="form-input" type="email" id="ba-email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+          </div>
+
+          <div class="step-form-group">
+            <label class="form-label" for="ba-phone">Telefon <span style="color:var(--secondary);font-size:0.65rem;letter-spacing:0.04em;text-transform:none">(optional)</span></label>
+            <input class="form-input" type="tel" id="ba-phone" name="phone" placeholder="+49 …" autocomplete="tel">
+          </div>
+
+          <p style="font-size:0.75rem;color:var(--secondary);margin-bottom:28px;line-height:1.6">
+            Ihre Angaben werden vertraulich behandelt und ausschließlich für die Kontaktaufnahme genutzt.
+          </p>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-outline" data-prev="1">← Zurück</button>
+            <button type="submit" class="btn btn-primary">Bedarfsanalyse senden</button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Success State -->
+      <div class="success-message" id="success-msg" role="alert" aria-live="polite">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px;margin:0 auto 28px" aria-hidden="true">
+          <rect x="1" y="1" width="58" height="58" stroke="#222" stroke-width="1"/>
+          <polyline points="18,30 26,38 42,22" stroke="white" stroke-width="1.5"/>
+        </svg>
+        <h2>Vielen Dank!</h2>
+        <p>Wir haben Ihre Bedarfsanalyse erhalten und melden uns innerhalb von 48 Stunden bei Ihnen.</p>
+        <a href="index.html" class="btn btn-outline">Zur Startseite</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">Georalis</p>
+      <p class="footer-tagline">Wandel. Stabilität. Wirkung.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul class="footer-links" role="list">
+        <li><a href="fokus.html">Fokus</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bedarfsanalyse.html">Bedarfsanalyse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <div class="footer-contact">
+        <p>Georgiana Bonas, EMBA<br>Founder &amp; Managing Director</p>
+        <p style="margin-top:8px">Bruggraberweg 15<br>8344 Bad Gleichenberg</p>
+        <p><a href="mailto:office@georalis.at">office@georalis.at</a></p>
+        <p><a href="tel:+436606708331">+43 660 670 83 31</a></p>
+        <p>Österreich</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Georalis Consulting GmbH</p>
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+<script>
+  // Success state after submission
+  document.getElementById('analyse-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.querySelector('.steps-progress').style.display = 'none';
+    const msg = document.getElementById('success-msg');
+    msg.style.display = 'block';
+    if (typeof gsap !== 'undefined') {
+      gsap.from(msg, { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out' });
+    }
+  });
+</script>
+</body>
+</html>

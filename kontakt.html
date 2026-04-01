@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontaktieren Sie Georalis Consulting GmbH – Georgiana Bonas, EMBA.">
+  <meta property="og:title" content="Kontakt — Georalis Consulting GmbH">
+  <title>Kontakt — Georalis Consulting GmbH</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Hauptnavigation">
+  <a href="index.html" class="nav-logo">Georalis</a>
+  <ul class="nav-links" role="list">
+    <li><a href="fokus.html" class="nav-link">Fokus</a></li>
+    <li><a href="service.html" class="nav-link">Service</a></li>
+    <li><a href="profil.html" class="nav-link">Profil</a></li>
+    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    <li><a href="bedarfsanalyse.html" class="nav-cta">Bedarfsanalyse</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" role="dialog" aria-modal="true">
+  <a href="fokus.html" class="nav-link">Fokus</a>
+  <a href="service.html" class="nav-link">Service</a>
+  <a href="profil.html" class="nav-link">Profil</a>
+  <a href="kontakt.html" class="nav-link">Kontakt</a>
+  <a href="bedarfsanalyse.html" class="btn btn-outline">Bedarfsanalyse</a>
+</div>
+
+<main>
+
+  <header class="page-header reveal">
+    <span class="label">Kontakt</span>
+    <h1>Starten Sie das Gespräch.</h1>
+    <p>Direkt, unkompliziert und vertraulich.</p>
+  </header>
+
+  <section class="section" aria-labelledby="kontakt-heading">
+    <div class="kontakt-layout">
+
+      <!-- Contact Info -->
+      <div class="kontakt-info reveal">
+        <h2 id="kontakt-heading">Wir freuen uns<br>von Ihnen zu hören.</h2>
+        <p>Ob erste Fragen, ein konkretes Anliegen oder der Wunsch nach einem unverbindlichen Gespräch — schreiben Sie uns. Wir melden uns innerhalb von 48 Stunden.</p>
+
+        <div class="kontakt-detail">
+          <span class="label">E-Mail</span>
+          <p><a href="mailto:office@georalis.at" style="color:var(--text);transition:opacity 0.3s" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">office@georalis.at</a></p>
+        </div>
+
+        <div class="kontakt-detail">
+          <span class="label">Telefon</span>
+          <p><a href="tel:+436606708331" style="color:var(--text);transition:opacity 0.3s" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">+43 660 670 83 31</a></p>
+        </div>
+
+        <div class="kontakt-detail">
+          <span class="label">Adresse</span>
+          <p>Bruggraberweg 15<br>8344 Bad Gleichenberg<br>Österreich</p>
+        </div>
+
+        <div class="kontakt-detail">
+          <span class="label">Beratungssprachen</span>
+          <p>Deutsch · Englisch · Rumänisch</p>
+        </div>
+
+        <div class="kontakt-detail">
+          <span class="label">Verfügbarkeit</span>
+          <p>Mo – Fr, 9:00 – 18:00 Uhr<br>Erstgespräche auch abends möglich</p>
+        </div>
+
+        <a href="bedarfsanalyse.html" class="kontakt-banner">
+          <span>Lieber strukturiert starten? → Zur Bedarfsanalyse</span>
+          <span style="font-size:1.25rem">→</span>
+        </a>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal">
+        <form id="contact-form" action="#" method="post" novalidate aria-label="Kontaktformular">
+
+          <div class="form-group">
+            <label class="form-label" for="cf-name">Name <span aria-label="Pflichtfeld">*</span></label>
+            <input class="form-input" type="text" id="cf-name" name="name" placeholder="Ihr vollständiger Name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-company">Unternehmen</label>
+            <input class="form-input" type="text" id="cf-company" name="company" placeholder="Ihr Unternehmen (optional)" autocomplete="organization">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-email">E-Mail <span aria-label="Pflichtfeld">*</span></label>
+            <input class="form-input" type="email" id="cf-email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Nachricht <span aria-label="Pflichtfeld">*</span></label>
+            <textarea class="form-textarea" id="cf-message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen oder Ihre Frage …" required rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">Georalis</p>
+      <p class="footer-tagline">Wandel. Stabilität. Wirkung.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul class="footer-links" role="list">
+        <li><a href="fokus.html">Fokus</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="bedarfsanalyse.html">Bedarfsanalyse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <div class="footer-contact">
+        <p>Georgiana Bonas, EMBA<br>Founder &amp; Managing Director</p>
+        <p style="margin-top:8px">Bruggraberweg 15<br>8344 Bad Gleichenberg</p>
+        <p><a href="mailto:office@georalis.at">office@georalis.at</a></p>
+        <p><a href="tel:+436606708331">+43 660 670 83 31</a></p>
+        <p>Österreich</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Georalis Consulting GmbH</p>
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <a href="impressum.html">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
