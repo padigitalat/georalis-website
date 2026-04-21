@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Georgiana Bonas, EMBA — Founder & Managing Director von Georalis Consulting GmbH.">
+  <meta name="description" content="Georalis Consulting — Unser Ansatz, unsere Werte und unsere Expertise in industrieller Transformation und Supply Chain. Order in Motion.">
   <meta property="og:title" content="Profil — Georalis Consulting GmbH">
   <title>Profil — Georalis Consulting GmbH</title>
   <link rel="stylesheet" href="styles.css">
@@ -11,15 +11,19 @@
 <body>
 
 <nav class="nav" role="navigation" aria-label="Hauptnavigation">
-  <a href="index.html" class="nav-logo">Georalis</a>
+  <a href="index.html" class="nav-logo">
+  <span class="nav-logo-name">Georalis</span>
+  <span class="nav-logo-slogan">Order in Motion</span>
+</a>
   <ul class="nav-links" role="list">
     <li><a href="fokus.html" class="nav-link">Fokus</a></li>
     <li><a href="service.html" class="nav-link">Service</a></li>
     <li><a href="profil.html" class="nav-link">Profil</a></li>
     <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
     <li><a href="bedarfsanalyse.html" class="nav-cta">Bedarfsanalyse</a></li>
+    <li class="lang-switch"><a href="profil-en.html" class="lang-link">EN</a></li>
   </ul>
-  <button class="nav-hamburger" aria-label="Menü öffnen">
+  <button class="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -35,105 +39,115 @@
 <main>
 
   <header class="page-header reveal">
-    <span class="label">Profil</span>
-    <h1>Georgiana Bonas,<br>EMBA</h1>
-    <p>Founder &amp; Managing Director — Georalis Consulting GmbH</p>
+    <span class="label">Unser Ansatz</span>
+    <h1>Order in Motion.<br>Ergebnisse, keine Folien.</h1>
+    <p>Wir beraten nicht für Berichte — wir begleiten Industrieunternehmen bis zur messbaren Veränderung.</p>
   </header>
 
-  <!-- Bio Section -->
-  <section class="section" aria-labelledby="bio-heading">
-    <div class="profil-layout">
-
-      <!-- Photo Placeholder -->
-      <div class="profil-photo reveal" role="img" aria-label="Portrait Placeholder Georgiana Bonas">
-        <span class="profil-initials">GB</span>
+  <!-- Prinzipien -->
+  <section class="section" aria-labelledby="ansatz-heading">
+    <div class="section-header reveal">
+      <span class="label">Philosophie</span>
+      <h2 id="ansatz-heading">Was uns unterscheidet.</h2>
+    </div>
+    <div class="models-grid reveal">
+      <div class="model-item">
+        <svg class="model-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="18" cy="18" r="14"/>
+          <polyline points="10,18 15,23 26,13"/>
+        </svg>
+        <span class="model-sub">Prinzip 01</span>
+        <h3>Ergebnisse statt Empfehlungen</h3>
+        <p>Wir liefern keine Präsentationen — wir begleiten die Umsetzung bis das Ergebnis messbar ist.</p>
       </div>
-
-      <!-- Bio Content -->
-      <div class="profil-bio reveal">
-        <h2 class="profil-name" id="bio-heading">Georgiana Bonas</h2>
-        <span class="profil-title">EMBA · Founder &amp; Managing Director</span>
-
-        <p>Georgiana Bonas ist Unternehmensberaterin mit internationaler Erfahrung in Prozessoptimierung, Supply Chain Management und organisationaler Transformation. Mit einem Executive MBA und jahrelanger Praxis in mittelständischen Unternehmen, Konzernen und gemeinnützigen Organisationen bringt sie sowohl strategische Tiefe als auch operatives Know-how mit.</p>
-
-        <p>Sie gründete Georalis Consulting mit dem Ziel, Unternehmen und Organisationen jenseits von Standardlösungen zu begleiten — individuell, substanziell und mit echtem Commitment für Ergebnisse. Ihr Ansatz verbindet analytische Strenge mit menschlicher Klarheit: Beraten bedeutet für sie nicht, Antworten zu liefern, sondern gemeinsam mit ihren Klientinnen und Klienten die richtigen Fragen zu stellen.</p>
-
-        <p>Ihr besonderer Schwerpunkt liegt im Bereich Zoll und Außenwirtschaft, wo sie Unternehmen bei der Compliance-Gestaltung und strategischen Neuausrichtung globaler Lieferketten unterstützt. Darüber hinaus begleitet sie Führungskräfte in Umbruchphasen — als strategische Sparringspartnerin, die unbequeme Wahrheiten ebenso ausspricht wie konstruktive Wege aufzeigt.</p>
-
-        <p>Georalis steht für das, was Georgiana Bonas antreibt: Wandel möglich machen, Stabilität aufbauen und nachhaltige Wirkung erzeugen — für Unternehmen, Menschen und Organisationen, die etwas bewegen wollen.</p>
-
-        <div class="profil-tags" role="list" aria-label="Expertise">
-          <span class="profil-tag" role="listitem">Prozessoptimierung</span>
-          <span class="profil-tag" role="listitem">Zollmanagement</span>
-          <span class="profil-tag" role="listitem">Transformation</span>
-          <span class="profil-tag" role="listitem">Führungsentwicklung</span>
-          <span class="profil-tag" role="listitem">Supply Chain</span>
-          <span class="profil-tag" role="listitem">Non-Profit</span>
-          <span class="profil-tag" role="listitem">Mittelstand</span>
-          <span class="profil-tag" role="listitem">Change Management</span>
-        </div>
+      <div class="model-item">
+        <svg class="model-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <rect x="6" y="6" width="24" height="24"/>
+          <line x1="6" y1="18" x2="30" y2="18"/>
+          <line x1="18" y1="6" x2="18" y2="30"/>
+        </svg>
+        <span class="model-sub">Prinzip 02</span>
+        <h3>Industrie-Tiefe</h3>
+        <p>Kein generisches Consulting — tiefe Expertise in Manufacturing, Supply Chain und Global Trade.</p>
       </div>
-
+      <div class="model-item">
+        <svg class="model-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <polyline points="4,28 14,16 22,22 32,8"/>
+        </svg>
+        <span class="model-sub">Prinzip 03</span>
+        <h3>Messbare Wirkung</h3>
+        <p>30–60% Kostenreduktion in fokussierten Bereichen. KPI-Strukturen die funktionieren. Transparenz die bleibt.</p>
+      </div>
+      <div class="model-item">
+        <svg class="model-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="18" cy="12" r="5"/>
+          <path d="M8 30 C8 24 28 24 28 30"/>
+        </svg>
+        <span class="model-sub">Prinzip 04</span>
+        <h3>Auf Augenhöhe</h3>
+        <p>Strategische Sparringspartner für Entscheider — direkt, ehrlich, ohne Agenda.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Timeline -->
-  <section class="section" style="border-top: 1px solid var(--border)" aria-labelledby="timeline-heading">
-    <div class="section-header reveal">
-      <span class="label">Werdegang</span>
-      <h2 id="timeline-heading">Stationen &amp; Meilensteine</h2>
-    </div>
-
-    <div style="max-width: 680px">
-      <div class="timeline reveal">
-        <div class="timeline-line" aria-hidden="true"></div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2022</span>
-          <h3>Gründung Georalis Consulting GmbH</h3>
-          <p>Start der eigenen Beratungsgesellschaft mit Fokus auf Transformation, Supply Chain und Non-Profit. Aufbau eines Netzwerks aus Klientinnen und Klienten in der D-A-CH-Region.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2020 – 2022</span>
-          <h3>Senior Beraterin — Internationale Unternehmensberatung</h3>
-          <p>Leitung komplexer Transformationsprojekte in Mittelstand und Großunternehmen. Schwerpunkte: Supply Chain Redesign, Zollmanagement und digitale Prozessoptimierung.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2019</span>
-          <h3>Executive MBA (EMBA)</h3>
-          <p>Abschluss des Executive MBA mit Auszeichnung. Schwerpunkte: Strategisches Management, Führung und internationale Unternehmensführung.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2016 – 2020</span>
-          <h3>Head of Operations — Mittelständisches Industrieunternehmen</h3>
-          <p>Verantwortung für operative Excellence, globale Einkaufsstrategien und Zoll-Compliance. Aufbau einer internationalen Lieferantenbasis und Einführung eines unternehmensweiten ERP-Systems.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2013 – 2016</span>
-          <h3>Projektleiterin — Non-Profit-Organisation</h3>
-          <p>Leitung strategischer Entwicklungsprojekte in einer internationalen NGO. Aufbau von Governance-Strukturen, Wirkungsmessung und Stakeholder-Engagement.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-year">2011 – 2013</span>
-          <h3>Studium Wirtschaftswissenschaften &amp; Management</h3>
-          <p>Bachelor-Abschluss mit internationalem Auslandssemester. Grundlegung des analytischen und strategischen Fundaments.</p>
-        </div>
-
+  <!-- Stats -->
+  <section class="section" style="padding-top: 0" aria-label="Kennzahlen">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="15" data-suffix="+">0+</span>
+        <p class="stat-label">Jahre Erfahrung in Industrie &amp; Supply Chain</p>
       </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="80" data-suffix="+">0+</span>
+        <p class="stat-label">Projekte in D-A-CH und international</p>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-count="60" data-suffix="%">0%</span>
+        <p class="stat-label">Kostenreduktion in fokussierten Bereichen</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branchen -->
+  <section class="section" aria-labelledby="branchen-heading">
+    <div class="section-header reveal">
+      <span class="label">Branchen</span>
+      <h2 id="branchen-heading">Unsere Industrie-Expertise.</h2>
+    </div>
+    <div class="focus-grid reveal">
+      <article class="focus-card">
+        <div class="focus-card-inner">
+          <h3>Maschinenbau &amp; Anlagenbau</h3>
+          <p>Komplexe Fertigungsprozesse, lange Lieferketten, hoher Individualisierungsgrad — wir kennen die Herausforderungen.</p>
+        </div>
+      </article>
+      <article class="focus-card">
+        <div class="focus-card-inner">
+          <h3>Automotive Supply Chain</h3>
+          <p>Just-in-time, globale Liefernetzwerke, strenge Compliance-Anforderungen — wir optimieren end-to-end.</p>
+        </div>
+      </article>
+      <article class="focus-card">
+        <div class="focus-card-inner">
+          <h3>Elektronikfertigung</h3>
+          <p>High-Mix/Low-Volume, volatile Märkte, kritische Komponenten — wir schaffen Stabilität und Steuerbarkeit.</p>
+        </div>
+      </article>
+      <article class="focus-card">
+        <div class="focus-card-inner">
+          <h3>Produktion &amp; Fertigung</h3>
+          <p>Serienproduktion, Lean-Initiativen, operative Exzellenz — wir liefern nachhaltige Verbesserungen.</p>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="section cta-section" aria-labelledby="profil-cta-heading">
-    <h2 class="reveal" id="profil-cta-heading">Lernen wir uns kennen.</h2>
+    <h2 class="reveal" id="profil-cta-heading">Bereit für messbare Ergebnisse?</h2>
     <div class="cta-buttons reveal">
-      <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
-      <a href="bedarfsanalyse.html" class="btn btn-outline">Bedarfsanalyse starten</a>
+      <a href="bedarfsanalyse.html" class="btn btn-primary">Bedarfsanalyse starten</a>
+      <a href="kontakt.html" class="btn btn-outline">Kontakt aufnehmen</a>
     </div>
   </section>
 
@@ -143,7 +157,7 @@
   <div class="footer-grid">
     <div>
       <p class="footer-logo">Georalis</p>
-      <p class="footer-tagline">Wandel. Stabilität. Wirkung.</p>
+      <p class="footer-tagline">Order in Motion.</p>
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
@@ -170,8 +184,8 @@
     <p>© 2026 Georalis Consulting GmbH</p>
     <nav class="footer-legal" aria-label="Rechtliches">
       <a href="impressum.html">Impressum</a>
-      <a href="#">Datenschutz</a>
-      <a href="#">AGB</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
     </nav>
   </div>
 </footer>
