@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ── Startseiten ── -->
+  <url>
+    <loc>https://georalis.at/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/index-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/index-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ── Hauptseiten ── -->
+  <url>
+    <loc>https://georalis.at/fokus.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/fokus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/fokus-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/fokus-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/fokus.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/fokus-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/service.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/service-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/service-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/service.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/service-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/profil.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/profil.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/profil-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/profil-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/profil.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/profil-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/kontakt.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/kontakt-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/kontakt-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/kontakt-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/bedarfsanalyse.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/bedarfsanalyse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/bedarfsanalyse-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/bedarfsanalyse-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/bedarfsanalyse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/bedarfsanalyse-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Supply Chain Landing Pages ── -->
+  <url>
+    <loc>https://georalis.at/sc-logistik.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-logistik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-logistik-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sc-logistik-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-logistik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-logistik-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/sc-einkauf.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-einkauf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-einkauf-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sc-einkauf-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-einkauf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-einkauf-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/sc-planung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-planung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-planung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sc-planung-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sc-planung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sc-planung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Zoll & Trade Landing Pages ── -->
+  <url>
+    <loc>https://georalis.at/zoll-kosten.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-kosten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-kosten-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/zoll-kosten-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-kosten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-kosten-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/zoll-incoterms.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-incoterms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-incoterms-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/zoll-incoterms-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-incoterms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-incoterms-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/zoll-ursprung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-ursprung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-ursprung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/zoll-ursprung-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-ursprung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-ursprung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/zoll-compliance.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-compliance-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/zoll-compliance-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/zoll-compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/zoll-compliance-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Organisation & Führung Landing Pages ── -->
+  <url>
+    <loc>https://georalis.at/org-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-governance-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/org-governance-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-governance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-governance-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/org-kpi.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-kpi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-kpi-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/org-kpi-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-kpi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-kpi-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/org-change.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-change.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-change-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/org-change-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/org-change.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/org-change-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Stabilisierung Landing Pages ── -->
+  <url>
+    <loc>https://georalis.at/stab-silos.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/stab-silos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/stab-silos-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/stab-silos-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/stab-silos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/stab-silos-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/stab-schnittstellen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/stab-schnittstellen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/stab-schnittstellen-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/stab-schnittstellen-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/stab-schnittstellen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/stab-schnittstellen-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Systeme & Digitalisierung Landing Pages ── -->
+  <url>
+    <loc>https://georalis.at/sys-automatisierung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-automatisierung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-automatisierung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sys-automatisierung-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-automatisierung.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-automatisierung-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/sys-daten.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-daten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-daten-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sys-daten-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-daten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-daten-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://georalis.at/sys-integration.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-integration.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-integration-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://georalis.at/sys-integration-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://georalis.at/sys-integration.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://georalis.at/sys-integration-en.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

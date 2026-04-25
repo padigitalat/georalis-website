@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /datenschutz.html
+Disallow: /datenschutz-en.html
+Disallow: /agb.html
+
+Sitemap: https://georalis.at/sitemap.xml

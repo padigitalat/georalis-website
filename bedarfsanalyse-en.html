@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="Logo/logo-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Georalis Assessment — Analyze your challenges in a structured way and start the conversation.">
+  <title>Assessment — Georalis Consulting GmbH</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .ba-wrap { max-width: 820px; margin: 0 auto; }
+    .ba-card { background: var(--surface); border: 1px solid var(--border); padding: clamp(24px, 4vw, 40px); margin-bottom: 20px; }
+    .ba-card-title { font-family: var(--sans); font-size: var(--xs-size); letter-spacing: 0.1em; text-transform: uppercase; color: var(--secondary); font-weight: 500; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .ba-q { margin-bottom: 20px; }
+    .ba-q:last-child { margin-bottom: 0; }
+    .ba-q-text { font-size: var(--sm-size); font-weight: 500; color: var(--text); margin-bottom: 10px; line-height: 1.5; }
+    .ba-req { color: var(--gold); margin-left: 2px; }
+    .ba-field-label { font-size: var(--xs-size); letter-spacing: 0.07em; text-transform: uppercase; color: var(--secondary); display: block; margin-bottom: 6px; font-weight: 500; }
+    .ba-field { width: 100%; padding: 12px 14px; border: 1px solid var(--border); background: var(--surface); font-family: var(--sans); font-size: var(--sm-size); color: var(--text); outline: none; transition: border-color 0.2s; }
+    .ba-field:focus { border-color: var(--accent); }
+    .ba-field::placeholder { color: rgba(102,102,102,0.45); }
+    select.ba-field { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    textarea.ba-field { resize: vertical; min-height: 90px; }
+    .ba-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .ba-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .ba-options { display: flex; flex-direction: column; gap: 6px; }
+    .ba-options-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .ba-opt { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.18s, background 0.18s; }
+    .ba-opt:hover { border-color: var(--accent); }
+    .ba-opt input { accent-color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .ba-opt span { font-size: var(--sm-size); color: var(--secondary); line-height: 1.45; }
+    .ba-opt:has(input:checked) { border-color: var(--accent); background: var(--light-tint); }
+    .ba-opt:has(input:checked) span { color: var(--text); }
+    .ba-conditional { display: none; }
+    .ba-submit-row { display: flex; justify-content: flex-end; padding-top: 8px; }
+    .ba-thankyou { display: none; text-align: center; padding: clamp(60px, 12vw, 120px) var(--side-pad); }
+    .ba-thankyou-check { width: 52px; height: 52px; border-radius: 50%; background: var(--light-tint); border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--accent); font-size: 1.25rem; }
+    .ba-thankyou h2 { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 400; margin-bottom: 12px; }
+    .ba-thankyou p { color: var(--secondary); font-size: var(--sm-size); }
+    @media (max-width: 768px) {
+      .ba-field { font-size: 1rem; }
+    }
+    @media (max-width: 640px) {
+      .ba-options-2, .ba-grid-2, .ba-grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main Navigation">
+  <a href="index-en.html" class="nav-logo">
+    <img src="Logo/logo-wordmark.png" alt="Georalis" class="nav-logo-wordmark"><span class="nav-logo-name">Georalis</span>
+    <span class="nav-logo-slogan">Order in Motion</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="fokus-en.html" class="nav-link">Focus</a></li>
+    <li><a href="service-en.html" class="nav-link">Services</a></li>
+    <li><a href="profil-en.html" class="nav-link">About</a></li>
+    <li><a href="kontakt-en.html" class="nav-link">Contact</a></li>
+    <li><a href="bedarfsanalyse-en.html" class="nav-cta">Get Started</a></li>
+    <li class="lang-switch"><a href="bedarfsanalyse.html" class="lang-link lang-active">DE</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <a href="fokus-en.html" class="nav-link">Focus</a>
+  <a href="service-en.html" class="nav-link">Services</a>
+  <a href="profil-en.html" class="nav-link">About</a>
+  <a href="kontakt-en.html" class="nav-link">Contact</a>
+  <a href="bedarfsanalyse-en.html" class="btn btn-outline">Get Started</a>
+</div>
+
+<main>
+  <section class="lp-hero">
+    <div class="lp-hero-inner">
+      <span class="label">Analysis &amp; Consulting</span>
+      <h1>Analyze your needs — structured and precise</h1>
+      <p class="lp-hero-sub">Tell us about your situation — we will get back to you personally.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ba-wrap">
+
+      <form id="ba-form" novalidate>
+
+        <!-- ── Contact Information ── -->
+        <div class="ba-card">
+          <p class="ba-card-title">Contact Information</p>
+
+          <div class="ba-q">
+            <label class="ba-field-label" for="q1">Company (incl. address/location)<span class="ba-req">*</span></label>
+            <input id="q1" type="text" name="q1" class="ba-field" placeholder="Company name, address, location" required>
+          </div>
+
+          <div class="ba-grid-3" style="margin-bottom:20px">
+            <div>
+              <label class="ba-field-label" for="q2">Industry<span class="ba-req">*</span></label>
+              <select id="q2" name="q2" class="ba-field" required>
+                <option value="">Please select</option>
+                <option>Industry &amp; Production</option>
+                <option>Trade &amp; E-Commerce</option>
+                <option>Logistics &amp; Supply Chain</option>
+                <option>Construction &amp; Real Estate</option>
+                <option>Energy, Environment &amp; Sustainability</option>
+                <option>Healthcare &amp; Social Services</option>
+                <option>IT, Digitalization &amp; Technology</option>
+                <option>Services &amp; Consulting</option>
+                <option>Finance, Insurance &amp; Investments</option>
+                <option>Startups &amp; Growth Companies</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="ba-field-label" for="q3">Number of Employees<span class="ba-req">*</span></label>
+              <select id="q3" name="q3" class="ba-field" required>
+                <option value="">Please select</option>
+                <option>&lt; 100</option>
+                <option>100–500</option>
+                <option>&gt; 500</option>
+              </select>
+            </div>
+            <div>
+              <label class="ba-field-label" for="q4">Annual Revenue<span class="ba-req">*</span></label>
+              <select id="q4" name="q4" class="ba-field" required>
+                <option value="">Please select</option>
+                <option>&lt; €5M</option>
+                <option>€5–50M</option>
+                <option>€50–250M</option>
+                <option>&gt; €250M</option>
+                <option>Not applicable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ba-q">
+            <label class="ba-field-label" for="q5">Name (Contact Person &amp; Role)<span class="ba-req">*</span></label>
+            <input id="q5" type="text" name="q5" class="ba-field" placeholder="First and last name, position" required>
+          </div>
+
+          <div class="ba-grid-2">
+            <div>
+              <label class="ba-field-label" for="q6">E-Mail<span class="ba-req">*</span></label>
+              <input id="q6" type="email" name="q6" class="ba-field" placeholder="your@email.com" required>
+            </div>
+            <div>
+              <label class="ba-field-label" for="q7">Phone Number<span class="ba-req">*</span></label>
+              <input id="q7" type="tel" name="q7" class="ba-field" placeholder="+43 ..." required>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Main Challenge ── -->
+        <div class="ba-card">
+          <p class="ba-card-title">Main Challenge</p>
+          <div class="ba-q">
+            <p class="ba-q-text"> Which of the following best describes your current challenge?<span class="ba-req">*</span></p>
+            <div class="ba-options">
+              <label class="ba-opt"><input type="radio" name="q8" value="operative" required><span>We have operational problems in day-to-day business</span></label>
+              <label class="ba-opt"><input type="radio" name="q8" value="supplychain"><span>Our supply chain is unstable or inefficient</span></label>
+              <label class="ba-opt"><input type="radio" name="q8" value="trade"><span>We have uncertainties in export, customs or EU regulations</span></label>
+              <label class="ba-opt"><input type="radio" name="q8" value="people"><span>There are internal communication or role-related problems</span></label>
+              <label class="ba-opt"><input type="radio" name="q8" value="restrukturierung"><span>We are in a difficult phase and need stabilization / restructuring</span></label>
+              <label class="ba-opt"><input type="radio" name="q8" value="strategie"><span>We need strategic clarity or executive support</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: Operational Excellence ── -->
+        <div class="ba-conditional" id="sec-operative">
+          <div class="ba-card">
+            <p class="ba-card-title">Operational Excellence</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How clearly and structured are your current workflows documented?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q9" value="a"><span>Very unclear, barely documented</span></label>
+                <label class="ba-opt"><input type="radio" name="q9" value="b"><span>Partially described, but inconsistent</span></label>
+                <label class="ba-opt"><input type="radio" name="q9" value="c"><span>Well documented, but not up to date</span></label>
+                <label class="ba-opt"><input type="radio" name="q9" value="d"><span>Fully structured and up to date</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well do your operational processes function on a daily basis?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q10" value="a"><span>Frequently chaotic</span></label>
+                <label class="ba-opt"><input type="radio" name="q10" value="b"><span>Many manual steps</span></label>
+                <label class="ba-opt"><input type="radio" name="q10" value="c"><span>Functional, but inefficient</span></label>
+                <label class="ba-opt"><input type="radio" name="q10" value="d"><span>Stable and efficient</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well do you know the costs and resource usage of your operational processes?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q11" value="a"><span>No transparency</span></label>
+                <label class="ba-opt"><input type="radio" name="q11" value="b"><span>High costs, causes unclear</span></label>
+                <label class="ba-opt"><input type="radio" name="q11" value="c"><span>Costs traceable, but too high</span></label>
+                <label class="ba-opt"><input type="radio" name="q11" value="d"><span>Optimized</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How reliable are data, documents and information flows?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q12" value="a"><span>Frequently incorrect or delayed</span></label>
+                <label class="ba-opt"><input type="radio" name="q12" value="b"><span>Multiple Excel versions in circulation</span></label>
+                <label class="ba-opt"><input type="radio" name="q12" value="c"><span>Data available, but not automated</span></label>
+                <label class="ba-opt"><input type="radio" name="q12" value="d"><span>Stable</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How high is the manual share of your standard processes?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q13" value="a"><span>Very high</span></label>
+                <label class="ba-opt"><input type="radio" name="q13" value="b"><span>Medium</span></label>
+                <label class="ba-opt"><input type="radio" name="q13" value="c"><span>Low</span></label>
+                <label class="ba-opt"><input type="radio" name="q13" value="d"><span>Very low</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How smoothly does coordination between departments/partners work?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q14" value="a"><span>Frequent information loss</span></label>
+                <label class="ba-opt"><input type="radio" name="q14" value="b"><span>Unclear responsibilities</span></label>
+                <label class="ba-opt"><input type="radio" name="q14" value="c"><span>Works, but time-consuming</span></label>
+                <label class="ba-opt"><input type="radio" name="q14" value="d"><span>Smooth</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How strongly do the problems affect your daily performance or customer satisfaction?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q15" value="a"><span>Very strongly</span></label>
+                <label class="ba-opt"><input type="radio" name="q15" value="b"><span>Medium</span></label>
+                <label class="ba-opt"><input type="radio" name="q15" value="c"><span>Low</span></label>
+                <label class="ba-opt"><input type="radio" name="q15" value="d"><span>No impact</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: Supply Chain ── -->
+        <div class="ba-conditional" id="sec-supplychain">
+          <div class="ba-card">
+            <p class="ba-card-title">Supply Chain</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How stable is your supply security?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q16" value="a"><span>Frequent bottlenecks</span></label>
+                <label class="ba-opt"><input type="radio" name="q16" value="b"><span>Individual risks</span></label>
+                <label class="ba-opt"><input type="radio" name="q16" value="c"><span>Generally stable</span></label>
+                <label class="ba-opt"><input type="radio" name="q16" value="d"><span>Very stable</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How strategically positioned is your network?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q17" value="a"><span>Not optimal, high risks/costs</span></label>
+                <label class="ba-opt"><input type="radio" name="q17" value="b"><span>Exists, but not evaluated</span></label>
+                <label class="ba-opt"><input type="radio" name="q17" value="c"><span>Good, but improvable</span></label>
+                <label class="ba-opt"><input type="radio" name="q17" value="d"><span>Strategically optimized</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How efficiently do materials &amp; information flow end-to-end?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q18" value="a"><span>Stoppages, back-queries</span></label>
+                <label class="ba-opt"><input type="radio" name="q18" value="b"><span>Slow or inconsistent</span></label>
+                <label class="ba-opt"><input type="radio" name="q18" value="c"><span>Stable with few weak points</span></label>
+                <label class="ba-opt"><input type="radio" name="q18" value="d"><span>Efficient</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well prepared are you for international supply chains / geopolitical risks?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q19" value="a"><span>Not at all</span></label>
+                <label class="ba-opt"><input type="radio" name="q19" value="b"><span>Partially</span></label>
+                <label class="ba-opt"><input type="radio" name="q19" value="c"><span>Good, but without a concept</span></label>
+                <label class="ba-opt"><input type="radio" name="q19" value="d"><span>Very well</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How strongly do supply chain problems affect your business?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q20" value="a"><span>Strongly</span></label>
+                <label class="ba-opt"><input type="radio" name="q20" value="b"><span>Medium</span></label>
+                <label class="ba-opt"><input type="radio" name="q20" value="c"><span>Low</span></label>
+                <label class="ba-opt"><input type="radio" name="q20" value="d"><span>No impact</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: Trade & Compliance ── -->
+        <div class="ba-conditional" id="sec-trade">
+          <div class="ba-card">
+            <p class="ba-card-title">Trade &amp; Compliance</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well do your current export processes function?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q21" value="a"><span>Frequently faulty or unclear</span></label>
+                <label class="ba-opt"><input type="radio" name="q21" value="b"><span>Delays due to manual or unclear processes</span></label>
+                <label class="ba-opt"><input type="radio" name="q21" value="c"><span>Generally stable, but improvable</span></label>
+                <label class="ba-opt"><input type="radio" name="q21" value="d"><span>Very stable</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How confident are you regarding customs processes, tariffing and Incoterms?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q22" value="a"><span>Uncertain – we often have questions or make mistakes</span></label>
+                <label class="ba-opt"><input type="radio" name="q22" value="b"><span>We depend on freight forwarders or external partners</span></label>
+                <label class="ba-opt"><input type="radio" name="q22" value="c"><span>We know the basics, but not all details</span></label>
+                <label class="ba-opt"><input type="radio" name="q22" value="d"><span>Very confident</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well do you handle topics like dual-use, embargoes, origin or preference calculations?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q23" value="a"><span>We have no reliable assessment</span></label>
+                <label class="ba-opt"><input type="radio" name="q23" value="b"><span>We know some rules, but not all</span></label>
+                <label class="ba-opt"><input type="radio" name="q23" value="c"><span>We have defined processes, but uncertainties</span></label>
+                <label class="ba-opt"><input type="radio" name="q23" value="d"><span>Fully confident</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well prepared are you for new EU regulations like EUDR or CBAM?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q24" value="a"><span>Not at all – we are uncertain or unprepared</span></label>
+                <label class="ba-opt"><input type="radio" name="q24" value="b"><span>Partially – individual areas are affected</span></label>
+                <label class="ba-opt"><input type="radio" name="q24" value="c"><span>Well prepared, but without clear processes</span></label>
+                <label class="ba-opt"><input type="radio" name="q24" value="d"><span>Fully prepared</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How confident are you dealing with authorities, permits and export applications?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q25" value="a"><span>Very uncertain, we need support</span></label>
+                <label class="ba-opt"><input type="radio" name="q25" value="b"><span>Partly confident, partly uncertain</span></label>
+                <label class="ba-opt"><input type="radio" name="q25" value="c"><span>We have processes, but want to improve them</span></label>
+                <label class="ba-opt"><input type="radio" name="q25" value="d"><span>Very confident</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How clear is your export strategy regarding target markets and international expansion?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q26" value="a"><span>Not clear – we need strategic direction</span></label>
+                <label class="ba-opt"><input type="radio" name="q26" value="b"><span>Initial approaches exist, but not concrete</span></label>
+                <label class="ba-opt"><input type="radio" name="q26" value="c"><span>Strategy exists, but not reviewed or prioritized</span></label>
+                <label class="ba-opt"><input type="radio" name="q26" value="d"><span>Fully clear</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: People, Communication & Change ── -->
+        <div class="ba-conditional" id="sec-people">
+          <div class="ba-card">
+            <p class="ba-card-title">People, Communication &amp; Change</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How clear are roles, responsibilities and expectations between departments?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q27" value="a"><span>Unclear, frequent misunderstandings</span></label>
+                <label class="ba-opt"><input type="radio" name="q27" value="b"><span>Partially clear, but many alignments needed</span></label>
+                <label class="ba-opt"><input type="radio" name="q27" value="c"><span>Mostly clear</span></label>
+                <label class="ba-opt"><input type="radio" name="q27" value="d"><span>Fully clear</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well do internal information flows work?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q28" value="a"><span>Frequent information losses</span></label>
+                <label class="ba-opt"><input type="radio" name="q28" value="b"><span>Communication works, but not consistent</span></label>
+                <label class="ba-opt"><input type="radio" name="q28" value="c"><span>Good, but could be optimized</span></label>
+                <label class="ba-opt"><input type="radio" name="q28" value="d"><span>Works perfectly</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well does your organization manage to implement change?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q29" value="a"><span>Very difficult – resistance, uncertainty</span></label>
+                <label class="ba-opt"><input type="radio" name="q29" value="b"><span>Partially – change is underway, but stalling</span></label>
+                <label class="ba-opt"><input type="radio" name="q29" value="c"><span>Good, but leadership &amp; structure are lacking</span></label>
+                <label class="ba-opt"><input type="radio" name="q29" value="d"><span>Very well</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well does cooperation between internal and external stakeholders work?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q30" value="a"><span>Weak – many conflicts</span></label>
+                <label class="ba-opt"><input type="radio" name="q30" value="b"><span>Medium – roles &amp; expectations partly unclear</span></label>
+                <label class="ba-opt"><input type="radio" name="q30" value="c"><span>Good, but improvable</span></label>
+                <label class="ba-opt"><input type="radio" name="q30" value="d"><span>Smooth</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well are employees prepared for new tasks, systems or processes?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q31" value="a"><span>Insufficient – high training need</span></label>
+                <label class="ba-opt"><input type="radio" name="q31" value="b"><span>Partly good, partly large gaps</span></label>
+                <label class="ba-opt"><input type="radio" name="q31" value="c"><span>Well prepared, but without systematic approach</span></label>
+                <label class="ba-opt"><input type="radio" name="q31" value="d"><span>Very well</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well is your organization prepared for structural or cultural change?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q32" value="a"><span>Weak – lacking leadership, direction or structure</span></label>
+                <label class="ba-opt"><input type="radio" name="q32" value="b"><span>Partially – approaches exist, but no clear transformation strategy</span></label>
+                <label class="ba-opt"><input type="radio" name="q32" value="c"><span>Well prepared, but not consistently embedded</span></label>
+                <label class="ba-opt"><input type="radio" name="q32" value="d"><span>Very well</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: Restructuring & Recovery ── -->
+        <div class="ba-conditional" id="sec-restrukturierung">
+          <div class="ba-card">
+            <p class="ba-card-title">Restructuring &amp; Recovery</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How would you describe your company's current situation?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q33" value="a"><span>Acute problems: processes breaking down, resources lacking</span></label>
+                <label class="ba-opt"><input type="radio" name="q33" value="b"><span>Several structural issues threaten medium-term performance</span></label>
+                <label class="ba-opt"><input type="radio" name="q33" value="c"><span>Individual challenges, but no crisis</span></label>
+                <label class="ba-opt"><input type="radio" name="q33" value="d"><span>No problems</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How stable are finances, processes and resources currently?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q34" value="a"><span>Unstable – we need to secure operability immediately</span></label>
+                <label class="ba-opt"><input type="radio" name="q34" value="b"><span>Partially stable, but structural changes needed</span></label>
+                <label class="ba-opt"><input type="radio" name="q34" value="c"><span>Largely stable, only individual areas affected</span></label>
+                <label class="ba-opt"><input type="radio" name="q34" value="d"><span>Very stable</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How urgent is the need for structural or strategic realignment?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q35" value="a"><span>Very high – we need short-term measures</span></label>
+                <label class="ba-opt"><input type="radio" name="q35" value="b"><span>High – we need to realign our business model / structure</span></label>
+                <label class="ba-opt"><input type="radio" name="q35" value="c"><span>Medium – optimizations would be helpful</span></label>
+                <label class="ba-opt"><input type="radio" name="q35" value="d"><span>Low</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONDITIONAL: Strategy & Executive Leadership ── -->
+        <div class="ba-conditional" id="sec-strategie">
+          <div class="ba-card">
+            <p class="ba-card-title">Strategy &amp; Executive Leadership</p>
+            <div class="ba-q">
+              <p class="ba-q-text"> How clear is your strategic direction for the next 12–24 months?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q36" value="a"><span>Unclear – we need clear prioritization &amp; strategic vision</span></label>
+                <label class="ba-opt"><input type="radio" name="q36" value="b"><span>Partially clear, but focus &amp; prioritization are lacking</span></label>
+                <label class="ba-opt"><input type="radio" name="q36" value="c"><span>Clearly defined, but not yet sufficiently operationalized</span></label>
+                <label class="ba-opt"><input type="radio" name="q36" value="d"><span>Very clear</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How confident do you feel about important business decisions?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q37" value="a"><span>Uncertain – we need structured decision bases</span></label>
+                <label class="ba-opt"><input type="radio" name="q37" value="b"><span>Partially confident – data or clarity lacking</span></label>
+                <label class="ba-opt"><input type="radio" name="q37" value="c"><span>Confident, but decisions take too long</span></label>
+                <label class="ba-opt"><input type="radio" name="q37" value="d"><span>Very confident</span></label>
+              </div>
+            </div>
+            <div class="ba-q">
+              <p class="ba-q-text"> How well aligned are leadership team and management on strategic topics?</p>
+              <div class="ba-options-2">
+                <label class="ba-opt"><input type="radio" name="q38" value="a"><span>Low – different perspectives, lacking focus</span></label>
+                <label class="ba-opt"><input type="radio" name="q38" value="b"><span>Medium – alignment exists, but not stable</span></label>
+                <label class="ba-opt"><input type="radio" name="q38" value="c"><span>Good – but occasional friction in decision rounds</span></label>
+                <label class="ba-opt"><input type="radio" name="q38" value="d"><span>Very well</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ALWAYS: Priority & Timeline ── -->
+        <div class="ba-card">
+          <p class="ba-card-title">Priority &amp; Timeline</p>
+
+          <div class="ba-q">
+            <p class="ba-q-text"> How urgently does the problem need to be solved?</p>
+            <div class="ba-options">
+              <label class="ba-opt"><input type="radio" name="q39" value="a"><span>Immediately – very high urgency</span></label>
+              <label class="ba-opt"><input type="radio" name="q39" value="b"><span>Soon – within the next 1–3 months</span></label>
+              <label class="ba-opt"><input type="radio" name="q39" value="c"><span>Medium-term – within the next 3–6 months</span></label>
+            </div>
+          </div>
+
+          <div class="ba-q">
+            <p class="ba-q-text"> Which currently best applies to your situation?</p>
+            <div class="ba-options">
+              <label class="ba-opt"><input type="radio" name="q40" value="a"><span>We lack a clear overview and reliable decision basis</span></label>
+              <label class="ba-opt"><input type="radio" name="q40" value="b"><span>Processes and structures exist, but are not effective</span></label>
+              <label class="ba-opt"><input type="radio" name="q40" value="c"><span>Our overall system is no longer sustainable</span></label>
+              <label class="ba-opt"><input type="radio" name="q40" value="d"><span>Leadership is overwhelmed by ongoing operational and regulatory issues</span></label>
+            </div>
+          </div>
+
+          <div class="ba-q">
+            <p class="ba-q-text"> How many areas are affected by the challenge?</p>
+            <div class="ba-options">
+              <label class="ba-opt"><input type="radio" name="q41" value="a"><span>Multiple areas / entire company</span></label>
+              <label class="ba-opt"><input type="radio" name="q41" value="b"><span>Individual core processes or projects</span></label>
+              <label class="ba-opt"><input type="radio" name="q41" value="c"><span>Clearly defined team / Quick-Check</span></label>
+            </div>
+          </div>
+
+          <div class="ba-q">
+            <p class="ba-q-text"> What type of collaboration do you prefer?</p>
+            <div class="ba-options">
+              <label class="ba-opt"><input type="radio" name="q42" value="a"><span>Intensive support (workshops, steering, sparring)</span></label>
+              <label class="ba-opt"><input type="radio" name="q42" value="b"><span>Regular support / partial implementation</span></label>
+              <label class="ba-opt"><input type="radio" name="q42" value="c"><span>Focus on analysis and recommendations</span></label>
+            </div>
+          </div>
+
+          <div class="ba-q">
+            <label class="ba-field-label" for="q43">Desired Start Date<span class="ba-req">*</span></label>
+            <input id="q43" type="date" name="q43" class="ba-field" required>
+          </div>
+
+          <div class="ba-q">
+            <label class="ba-field-label" for="q44">Additional Notes (optional)</label>
+            <textarea id="q44" name="q44" class="ba-field" placeholder="Is there any additional information you would like to share with us?"></textarea>
+          </div>
+        </div>
+
+        <div class="ba-submit-row">
+          <button type="submit" class="btn btn-primary">Submit Analysis</button>
+        </div>
+
+      </form>
+
+      <div class="ba-thankyou" id="ba-thankyou">
+        <div class="ba-thankyou-check">✓</div>
+        <h2>Thank you.</h2>
+        <p>We will get back to you shortly.</p>
+        <a href="index-en.html" class="btn btn-outline" style="margin-top:28px;display:inline-flex">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div><p class="footer-logo">Georalis</p><p class="footer-tagline">Order in Motion.</p></div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul class="footer-links" role="list">
+        <li><a href="fokus-en.html">Focus</a></li>
+        <li><a href="service-en.html">Services</a></li>
+        <li><a href="profil-en.html">About</a></li>
+        <li><a href="kontakt-en.html">Contact</a></li>
+        <li><a href="bedarfsanalyse-en.html">Get Started</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact">
+        <p>Georgiana Bonas, EMBA<br>Founder &amp; Managing Director</p>
+        <p style="margin-top:8px">Bruggraberweg 15<br>8344 Bad Gleichenberg</p>
+        <p><a href="mailto:office@georalis.at">office@georalis.at</a></p>
+        <p><a href="tel:+436606708331">+43 660 670 83 31</a></p>
+        <p>Austria</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Georalis Consulting GmbH</p>
+    <p>Designed by <a href="https://www.padigital.at/webdesign" target="_blank" rel="noopener">PA Digital</a> in Graz</p>
+    <nav class="footer-legal" aria-label="Legal">
+      <a href="impressum-en.html">Imprint</a>
+      <a href="datenschutz-en.html">Privacy Policy</a>
+      <a href="agb.html">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+<script>
+(function () {
+  var q8 = document.querySelectorAll('input[name="q8"]');
+  var sections = document.querySelectorAll('.ba-conditional');
+
+  q8.forEach(function (r) {
+    r.addEventListener('change', function () {
+      sections.forEach(function (s) { s.style.display = 'none'; });
+      var target = document.getElementById('sec-' + r.value);
+      if (target) { target.style.display = 'block'; }
+    });
+  });
+
+  document.getElementById('ba-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('ba-form').style.display = 'none';
+    var ty = document.getElementById('ba-thankyou');
+    ty.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}());
+</script>
+</body>
+</html>

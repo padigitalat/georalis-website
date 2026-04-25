@@ -53,23 +53,41 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
+
+    // White nav text when first section is dark
+    const firstSection = document.querySelector('main > section:first-child');
+    if (firstSection && (firstSection.classList.contains('hero') || firstSection.classList.contains('lp-hero'))) {
+      nav.classList.add('nav--over-dark');
+    }
   }
 
   // ── Mobile Nav ──
   const burger  = document.querySelector('.nav-hamburger');
   const overlay = document.querySelector('.nav-overlay');
   if (burger && overlay) {
+    // Inject language switcher into overlay from desktop nav
+    const langA = document.querySelector('.nav-links .lang-switch a');
+    if (langA) {
+      const mobileLang = document.createElement('a');
+      mobileLang.href = langA.getAttribute('href');
+      mobileLang.textContent = langA.textContent;
+      mobileLang.className = 'mobile-lang-link';
+      overlay.appendChild(mobileLang);
+    }
+
+    const closeOverlay = () => {
+      burger.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
     burger.addEventListener('click', () => {
       const open = burger.classList.toggle('active');
       overlay.classList.toggle('active', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
     overlay.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      });
+      a.addEventListener('click', closeOverlay);
     });
   }
 
