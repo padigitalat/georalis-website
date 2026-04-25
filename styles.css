@@ -201,7 +201,7 @@ h3 { font-size: var(--h3-size); }
   letter-spacing: 0.05em;
   padding: 10px 22px;
   background: var(--accent);
-  color: var(--text);
+  color: #FFFFFF;
   border: 1px solid var(--accent);
   transition: background var(--ease), color var(--ease), border-color var(--ease);
 }
