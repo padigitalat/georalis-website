@@ -2,6 +2,74 @@
    GEORALIS CONSULTING — MAIN JS
    ================================================ */
 
+/* ── Cookie Consent ── */
+(function () {
+  const KEY = 'georalis_consent';
+  const stored = localStorage.getItem(KEY);
+  const isEN = document.documentElement.lang === 'en';
+
+  function loadTracking() {
+    // LinkedIn Insight Tag — Partner-ID bitte eintragen
+    window._linkedin_partner_id = 'DEINE_LINKEDIN_PARTNER_ID';
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(window._linkedin_partner_id);
+    (function (l) {
+      if (!l) { window.lintrk = function (a, b) { window.lintrk.q.push([a, b]); }; window.lintrk.q = []; }
+      var s = document.getElementsByTagName('script')[0];
+      var b = document.createElement('script');
+      b.type = 'text/javascript'; b.async = true;
+      b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+
+    // Microsoft Ads UET — Tag-ID bitte eintragen
+    (function (w, d, t, r, u) {
+      w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments); };
+      var n = d.createElement(t); n.src = r; n.async = 1;
+      n.onload = function () { try { var o = { ti: 'DEINE_MICROSOFT_UET_ID' }; o.q = w[u].q; var uet = new UET(o); w[u] = function () { uet.push(arguments); }; } catch (e) {} };
+      d.getElementsByTagName(t)[0].parentNode.insertBefore(n, d.getElementsByTagName(t)[0]);
+    })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+  }
+
+  function showBanner() {
+    const privacyLink = isEN
+      ? '<a href="datenschutz-en.html">Privacy Policy</a>'
+      : '<a href="datenschutz.html">Datenschutz</a>';
+    const text = isEN
+      ? 'We use cookies for marketing and analytics (LinkedIn Insight Tag, Microsoft Ads). ' + privacyLink
+      : 'Diese Website verwendet Cookies für Marketing und Analyse (LinkedIn Insight Tag, Microsoft Ads). ' + privacyLink;
+
+    const el = document.createElement('div');
+    el.id = 'cookie-banner';
+    el.className = 'cookie-banner';
+    el.innerHTML =
+      '<div class="cookie-banner-inner">' +
+        '<p class="cookie-banner-text">' + text + '</p>' +
+        '<div class="cookie-banner-actions">' +
+          '<button id="cookie-decline" class="cookie-btn cookie-btn-decline">' + (isEN ? 'Decline' : 'Ablehnen') + '</button>' +
+          '<button id="cookie-accept" class="cookie-btn cookie-btn-accept">' + (isEN ? 'Accept' : 'Akzeptieren') + '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(el);
+
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      localStorage.setItem(KEY, 'accepted');
+      el.classList.add('cookie-banner--hidden');
+      loadTracking();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function () {
+      localStorage.setItem(KEY, 'declined');
+      el.classList.add('cookie-banner--hidden');
+    });
+  }
+
+  if (stored === 'accepted') {
+    loadTracking();
+  } else if (!stored) {
+    showBanner();
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Fade in on load ──

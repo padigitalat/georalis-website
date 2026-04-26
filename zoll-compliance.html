@@ -74,16 +74,62 @@
     <img src="Bilder/global-supply-chain.png" alt="">
   </div>
 
+  <style>
+    .topic-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin-top: 40px;
+    }
+    @media (max-width: 640px) {
+      .topic-photo-grid { grid-template-columns: 1fr; }
+    }
+    .topic-photo-card {
+      position: relative;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+    .topic-photo-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(6,8,12,0.88) 0%, rgba(6,8,12,0.25) 60%, transparent 100%);
+    }
+    .topic-photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      padding: 20px 24px;
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+  </style>
   <section class="section" style="background: var(--light-tint);">
     <div class="section-header reveal">
       <span class="label">Relevante Themen</span>
       <h2>Was Unternehmen in diesem Bereich suchen</h2>
     </div>
-    <div class="keyword-grid reveal">
-      <span class="keyword-pill">Trade Compliance</span>
-      <span class="keyword-pill">Exportkontrolle</span>
-      <span class="keyword-pill">CBAM / EUDR</span>
-      <span class="keyword-pill">Zollprüfung Vorbereitung</span>
+    <div class="topic-photo-grid reveal">
+      <div class="topic-photo-card" style="background-image:url('Global Trade/Global Trade.png')">
+        <span class="topic-photo-label">Trade Compliance</span>
+      </div>
+      <div class="topic-photo-card" style="background-image:url('Global Trade/Präferenz.png')">
+        <span class="topic-photo-label">Exportkontrolle</span>
+      </div>
+      <div class="topic-photo-card" style="background-image:url('Global Trade/Zollkosten optimieren.png')">
+        <span class="topic-photo-label">CBAM / EUDR</span>
+      </div>
+      <div class="topic-photo-card" style="background-image:url('Bilder/factory-engineers.png')">
+        <span class="topic-photo-label">Zollprüfung Vorbereitung</span>
+      </div>
     </div>
   </section>
 
@@ -186,6 +232,7 @@
     <nav class="footer-legal" aria-label="Rechtliches">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
     </nav>
   </div>
 </footer>
