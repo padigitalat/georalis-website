@@ -1010,6 +1010,11 @@ h3 { font-size: var(--h3-size); }
   position: absolute;
   inset: 0;
   background: rgba(6, 8, 12, 0.72);
+  pointer-events: none;
+}
+.relevante-img-bg,
+.relevante-img-bg--split > div {
+  pointer-events: none;
 }
 .relevante-img-content {
   position: relative;
