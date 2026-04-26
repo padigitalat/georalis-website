@@ -68,66 +68,22 @@
     </div>
   </section>
 
-  <div class="photo-strip" aria-hidden="true">
-    <img src="Bilder/green-supply-chain.png" alt="">
-    <img src="Bilder/global-supply-chain.png" alt="">
-  </div>
-
-  <style>
-    .topic-photo-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
-      margin-top: 40px;
-    }
-    @media (max-width: 640px) {
-      .topic-photo-grid { grid-template-columns: 1fr; }
-    }
-    .topic-photo-card {
-      position: relative;
-      height: 240px;
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-    }
-    .topic-photo-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(6,8,12,0.88) 0%, rgba(6,8,12,0.25) 60%, transparent 100%);
-    }
-    .topic-photo-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      padding: 20px 24px;
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-  </style>
-  <section class="section" style="background: var(--light-tint);">
-    <div class="section-header reveal">
-      <span class="label">Relevant Topics</span>
-      <h2>What companies in this area are looking for</h2>
+    <section class="section relevante-img-section">
+    <div class="relevante-img-bg relevante-img-bg--split">
+      <div style="background-image:url('Bilder/green-supply-chain.png')" ></div>
+      <div style="background-image:url('Bilder/global-supply-chain.png')" ></div>
     </div>
-    <div class="topic-photo-grid reveal">
-      <div class="topic-photo-card" style="background-image:url('Global Trade/Global Trade.png')">
-        <span class="topic-photo-label">Trade Compliance</span>
+    <div class="relevante-img-overlay"></div>
+    <div class="relevante-img-content">
+      <div class="section-header reveal">
+        <span class="label">Relevant Topics</span>
+        <h2>What companies in this area are looking for</h2>
       </div>
-      <div class="topic-photo-card" style="background-image:url('Global Trade/Präferenz.png')">
-        <span class="topic-photo-label">Export Controls</span>
-      </div>
-      <div class="topic-photo-card" style="background-image:url('Global Trade/Zollkosten optimieren.png')">
-        <span class="topic-photo-label">CBAM / EUDR</span>
-      </div>
-      <div class="topic-photo-card" style="background-image:url('Bilder/factory-engineers.png')">
-        <span class="topic-photo-label">Customs Audit Preparation</span>
+      <div class="keyword-grid reveal">
+        <span class="keyword-pill">Trade Compliance</span>
+        <span class="keyword-pill">Export Controls</span>
+        <span class="keyword-pill">CBAM / EUDR</span>
+        <span class="keyword-pill">Customs Audit Preparation</span>
       </div>
     </div>
   </section>

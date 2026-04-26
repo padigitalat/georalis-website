@@ -986,6 +986,43 @@ h3 { font-size: var(--h3-size); }
   .step-nav .btn { width: 100%; }
 }
 
+/* ── Relevante Themen — Bild-Hintergrund ── */
+.relevante-img-section {
+  position: relative;
+  overflow: hidden;
+  background: none !important;
+}
+.relevante-img-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.relevante-img-bg--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.relevante-img-bg--split > div {
+  background-size: cover;
+  background-position: center;
+}
+.relevante-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 8, 12, 0.72);
+}
+.relevante-img-content {
+  position: relative;
+  z-index: 1;
+}
+.relevante-img-section .label { color: rgba(200, 169, 106, 0.9) !important; }
+.relevante-img-section h2 { color: #fff !important; }
+.relevante-img-section .keyword-pill {
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
 /* ── Cookie Consent Banner ── */
 .cookie-banner {
   position: fixed;
