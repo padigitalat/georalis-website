@@ -267,6 +267,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Back-forward cache fix ──
+  window.addEventListener('pageshow', e => {
+    if (e.persisted) {
+      document.body.style.transition = 'none';
+      document.body.style.opacity = '1';
+    }
+  });
+
   // ── Bedarfsanalyse Multi-Step Form ──
   const stepForms = document.querySelectorAll('.step-form');
   const stepBars  = document.querySelectorAll('.step-bar');
