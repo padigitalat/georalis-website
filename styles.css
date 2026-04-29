@@ -987,6 +987,11 @@ h3 { font-size: var(--h3-size); }
   position: relative;
   overflow: hidden;
   background: none !important;
+  aspect-ratio: 16 / 9;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .relevante-img-bg {
   position: absolute;
